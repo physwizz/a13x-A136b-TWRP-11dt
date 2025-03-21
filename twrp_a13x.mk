@@ -5,17 +5,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
 
 # Inherit from a13x device
 $(call inherit-product, device/samsung/a13x/device.mk)
 
 PRODUCT_DEVICE := a13x
-PRODUCT_NAME := omni_a13x
+PRODUCT_NAME := twrp_a13x
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A136B
 PRODUCT_MANUFACTURER := samsung
